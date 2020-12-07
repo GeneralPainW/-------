@@ -1,0 +1,271 @@
+<html>
+
+<head>
+	<title>Портал организации вагонопотоков</title>
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js_file.js"></script>
+</head>
+
+<body>
+	<style>
+		@page Section1 {
+			size: 21.0cm 29.7cm;
+			margin: 2.0cm 1.5cm 2.0cm 1.5cm;
+			mso-header-margin: .5in;
+			mso-footer-margin: .5in;
+			mso-paper-source: 0;
+		}
+
+		div.Section1 {
+			page: Section1;
+		}
+
+		@page Section2 {
+			size: 29.7cm 21.0cm;
+			mso-page-orientation: landscape;
+			margin: 2.0cm 1.5cm 2.0cm 1.5cm;
+			mso-header-margin: .5in;
+			mso-footer-margin: .5in;
+			mso-paper-source: 0;
+		}
+
+		div.Section2 {
+			page: Section2;
+		}
+
+	</style>
+	<input type="text" id="searchField">
+	<br>
+	<br>
+	<input type="button" value="Поиск" onclick="btn_search()">
+	<div class="Section1">
+
+
+
+		<div style="font-family: 'Times New Roman'; font-size: 10pt; color: grey; text-align: right;"></div>
+		<table border="1" cols="3" style="border-collapse: collapse; border-style: none none none none; font-family: 'Times New Roman'; font-size: 12pt;" id="main_table">
+
+
+			<tr>
+				<th colspan="3" style="font-size: 14pt; border-style: none none none none;">&nbsp;</th>
+			</tr>
+			<tr>
+				<th colspan="3" style="font-size: 16pt; border-style: none none none none;"></th>
+			</tr>
+			<tr>
+				<th colspan="3" style="font-size: 18pt; border-style: none none none none;">&nbsp;</th>
+			</tr>
+			<tr>
+				<th bgcolor="#D6D6D6" colspan="3" style="font-size: 14pt;">&nbsp;</th>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (61100) ИМ.М.ГОРЬКОГО</b> Межгос <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(61100) ИМ.МАКСИМА ГОРЬКОГО</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">01000 - 24510<br>24560 - 24620<br>26000 - 26200<br>26290 - 26740<br>26860 - 26970<br>28000 - 30670<br>31000 - 31550<br>31710 - 31730<br>31760 - 31860<br>32000 - 53940<br>54032 - 54060<br>56310 - 56310<br>56470 - 56990<br>58000 - 60103<br>60300 - 60700<br>61000 - 61340<br>61354 - 61430<br>61460 - 61560<br>61580 - 61590<br>61810 - 61810<br>62166 - 62320<br>85610 - 85900<br>86700 - 86960</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ЕРАСХ и далее;<br>АЙРУМ и далее;<br>ИДЖЕВАН (ЭКСП.) и далее;<br>СЛЕПЦОВСКАЯ и далее;<br>ОСЕТИНОВСКИЙ и далее до ГАНТИАДИ (ЭКСП.) искл.;<br>ШУКЛИНО и далее;<br>ВЫША и далее;<br>КУСТАРЕВКА и далее;<br>ШАТКИ и далее до БОЛЬШАКОВО, ЕЖИХА искл.;<br>ИВАНОВО-СОРТИРОВОЧНОЕ и далее до ЕРМОЛИНО искл.;<br>ТРУБНАЯ и далее до КИПРЕВО, РОССОША, ПЕТУШКИ, КЕНЗИНО, АРМЯНСК, ЕВПАТОРИЯ-КУРОРТ, ЕЛЬШАНКА (ЭКСП.), ОБЛОВКА искл.;<br>КОЛЬЧУГИНО и далее;<br>УЛЫБЫШЕВО и далее;<br>ВТОРОВО;<br>ПИЛЬНА и далее;<br>САВВАТИЯ и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;">В том числе на:
+					Октябрьская, Калининградская, Московская, Белорусская, Юго-Западная, Львовская, Одесская, Южная, Приднепровская, Донецкая, Молдавская, Литовские, Латвийская, Эстонская, ЗАО "Южно-Кавказская ж.д."</td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (61690) АСТРАХАНЬ II</b> Межгос <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(61690) АСТРАХАНЬ II</b> </td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (66000) КАНДЫАГАШ</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66000) КАНДЫАГАШ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">25420 - 25960<br>26750 - 26850<br>27000 - 27810<br>63490 - 63960<br>64330 - 66000<br>66090 - 66090<br>66490 - 66560<br>66590 - 66730<br>66750 - 67950<br>68000 - 68440<br>68460 - 68910<br>68930 - 68930<br>68950 - 68960<br>68990 - 69000<br>69020 - 69150<br>69240 - 69350<br>69390 - 69640<br>69670 - 69670<br>69680 - 71010<br>71040 - 71060<br>71100 - 71310<br>71330 - 71460<br>71480 - 71780<br>72000 - 72540<br>76000 - 85440<br>86000 - 86640<br>87000 - 87653<br>88000 - 93831<br>94000 - 99810</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ГРОМОВО;<br>ЕЖИХА и далее;<br>ЯНГИЕР и далее;<br>ЖЕТЫСАЙ и далее;<br>КАНДЫАГАШ и далее до ОСТ. ПУНКТ 199 КМ, КРАСНОАРМЕЙКА- КАЗАХСКАЯ, РАЗЪЕЗД 219 КМ, САРЫЖИДЕ, ЧОДАК, САГАРЧИН искл.;<br>АК-БУЛАК и далее до БУРУНДУКИ, САВВАТИЯ, СВЕЧА, НОВОПЕРЕЛЮБСКАЯ, КУЗНЕЦК, СОСНОВКА, БАЛАШЕЙКА, ОЗИНКИ (ЭКСП.) искл.;<br>ГЛОТОВКА и далее;<br>УСПЕНОВКА;<br>МАРАЛДЫ и далее;<br>НОВОИШИМСКАЯ и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;">В том числе на:
+					Свердловская, Южно-Уральская, Западно-Сибирская, Красноярская, АК Железные дороги Якутии, Восточно-Сибирская, Забайкальская, Дальневосточная</td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (66160) АКЖАЙЫК</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66160) АКЖАЙЫК</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66160 - 66160</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>АКЖАЙЫК;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (66330) МАНГИСТАУ</b> Внутридор групповой <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66330) МАНГИСТАУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66330 - 66390<br>66450 - 66470<br>68920 - 68920<br>68940 - 68940<br>68980 - 68980<br>69010 - 69010<br>69160 - 69160<br>69360 - 69380<br>74900 - 75990<br>87660 - 87760</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>МАНГИСТАУ и далее;<br>ТАХИАТАШ (ЭКСП.) и далее до ДЖУМУРТАУ, ШАВАТ (ЭКСП.) искл.;<br>ГАЗОДЖАК (ЭКСП.) и далее до ХОДЖАДАВЛЕТ (ЭКСП.), БОЛДЫР (ЭКСП.) искл.;<br>ТАЛИМАРДЖАН (ЭКСП.) и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;">В том числе на:
+					Туркменская</td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 2. </i><b>(66330) МАНГИСТАУ</b> </td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Скв. (73720) КУНГРАД</b> Межгос групповой <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(73720) КУНГРАД</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">71800 - 71960<br>72550 - 73670<br>73720 - 73960<br>73980 - 74450<br>74470 - 74890<br>93850 - 93870</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>КУНГРАД и далее до ТАХИАТАШ (ЭКСП.), БЕСТОБЕ искл.;<br>НАЗАРХАН;<br>КАРАОЗЕК и далее;<br>ДЖУМУРТАУ и далее;<br>ШАВАТ (ЭКСП.) и далее до ГАЗОДЖАК (ЭКСП.), БЛОКПОСТ №2 искл.;<br>ХОДЖАДАВЛЕТ (ЭКСП.) и далее;<br>БОЛДЫР (ЭКСП.) и далее;<br>ДАУТЕПА и далее до ТАЛИМАРДЖАН (ЭКСП.), ЯНГИЕР, ЖЕТЫСАЙ искл.;<br>ЧОДАК и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;">В том числе на:
+					Таджикская </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 2. </i><b>(73720) КУНГРАД</b> </td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Уч. (66150) ТЕНДЫК</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66150) ТЕНДЫК</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66150 - 66150</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ТЕНДЫК;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Уч. (66170) АТЫРАУ</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66170) АТЫРАУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">24530 - 24550<br>24630 - 25410<br>26210 - 26272<br>30700 - 30840<br>31570 - 31680<br>31700 - 31700<br>31740 - 31740<br>31880 - 31950<br>53950 - 54010<br>54072 - 56303<br>56320 - 56460<br>57000 - 57990<br>60110 - 60280<br>60710 - 60990<br>61350 - 61350<br>61440 - 61450<br>61570 - 61570<br>61600 - 61803<br>61815 - 62130<br>62340 - 63480<br>64000 - 64310<br>66170 - 66240</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>АТЫРАУ и далее до ТОНОВКА, ГРОМОВО, ЕРАСХ, СУВОРОВСКИЙ, ВЫША, ОСЕТИНОВСКИЙ, ШУКЛИНО, КУСТАРЕВКА, СЛЕПЦОВСКАЯ, ТРУБНАЯ, ШАТКИ, ИДЖЕВАН (ЭКСП.), АЙРУМ искл.;<br>ГАНТИАДИ (ЭКСП.) и далее;<br>КИРСАНОВ и далее;<br>БОЛЬШАКОВО и далее до ИВАНОВО-СОРТИРОВОЧНОЕ искл.;<br>ЕРМОЛИНО и далее;<br>ЕЛЬШАНКА (ЭКСП.);<br>КЕНЗИНО и далее;<br>ПЕТУШКИ и далее до УЛЫБЫШЕВО, ВТОРОВО искл.;<br>ОБЛОВКА и далее;<br>ОЗИНКИ (ЭКСП.) и далее;<br>НОВОПЕРЕЛЮБСКАЯ и далее;<br>КУЗНЕЦК и далее;<br>БАЛАШЕЙКА и далее до ДУБЕНКИ искл.;<br>БУРУНДУКИ и далее до КНЯЖИХА искл.;<br>СОСНОВКА;<br>СВЕЧА и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;">В том числе на:
+					Грузинская, Азербайджанская</td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Уч. (66250) КУЛЬСАРЫ</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66250) КУЛЬСАРЫ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66250 - 66250</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>КУЛЬСАРЫ;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Пер. (66100) ЖАМАНСОР</b> Внутридор <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66100) ЖАМАНСОР</b> </td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Сбу. (66000) КАНДЫАГАШ</b> Внутридор групповой <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66000) КАНДЫАГАШ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 2. </i><b>(66000) КАНДЫАГАШ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66020 - 66080<br>66100 - 66100<br>68970 - 68970</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ЖАМАНСОР;<br>САГИЗ и далее до КАНДЫАГАШ искл.;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Сбу. (66170) АТЫРАУ</b> Внутридор групповой <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66170) АТЫРАУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 2. </i><b>(66170) АТЫРАУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66120 - 66140</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ДОССОР и далее до ТЕНДЫК искл.;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#E6E6E6" style="padding-left: 10px;" colspan="3"><b>Сбу. (66280) БЕЙНЕУ</b> Внутридор групповой <br></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 1. </i><b>(66280) БЕЙНЕУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66320 - 66320</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>ШЕТПЕ;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 2. </i><b>(66280) БЕЙНЕУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66270 - 66310<br>66400 - 66400<br>66440 - 66440<br>66570 - 66580<br>67960 - 67990<br>69170 - 69230<br>69650 - 69660<br>71020 - 71030<br>71070 - 71090<br>71320 - 71320<br>71470 - 71470<br>73680 - 73710<br>73970 - 73970<br>74460 - 74460</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>БЕЙНЕУ и далее до КУНГРАД, ШЕТПЕ искл.;<br>САРЫЖИДЕ и далее;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+			<tr>
+				<td style="padding-left: 30px;" colspan="3"><i>Группа 3. </i><b>(66280) БЕЙНЕУ</b> </td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px; width: 110px;">66010 - 66010<br>66260 - 66260<br>66410 - 66430<br>66480 - 66480</td>
+				<td style="padding-left: 10px; width: 400px;">
+					<font color="#0000BB"></font>БЕКБЕКЕ (РЗД) и далее до КУЛЬСАРЫ искл.;<br>ТОЛТЫР и далее до БЕЙНЕУ искл.;<br>
+					<font color="#0000BB"></font>
+				</td>
+				<td style="width: 250px;"></td>
+			</tr>
+
+		</table>
+
+	</div>
+</body>
